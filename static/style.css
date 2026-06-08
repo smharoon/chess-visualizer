@@ -1,0 +1,164 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #111827;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.app {
+    text-align: center;
+    width: 95%;
+    max-width: 720px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.top-panel {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.top-panel > div {
+    background: #1f2937;
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.label {
+    font-size: 13px;
+    color: #9ca3af;
+}
+
+#target-square {
+    font-size: 34px;
+    font-weight: bold;
+    color: #facc15;
+}
+
+#timer,
+#score,
+#level {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+#start-btn {
+    padding: 12px 28px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    background: #22c55e;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+#start-btn:hover {
+    background: #16a34a;
+}
+
+#message {
+    height: 28px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+#board-container {
+    display: flex;
+    justify-content: center;
+}
+
+#board {
+    width: 560px;
+    height: 560px;
+    display: grid;
+    border: 5px solid #374151;
+    background: white;
+}
+
+.cell {
+    position: relative;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.light {
+    background: #f0d9b5;
+}
+
+.dark {
+    background: #b58863;
+}
+
+.cell:hover {
+    outline: 4px solid #38bdf8;
+    outline-offset: -4px;
+}
+
+.zone-top {
+    border-top: 3px solid rgba(17, 24, 39, 0.55);
+}
+
+.zone-left {
+    border-left: 3px solid rgba(17, 24, 39, 0.55);
+}
+
+.zone-bottom {
+    border-bottom: 3px solid rgba(17, 24, 39, 0.55);
+}
+
+.zone-right {
+    border-right: 3px solid rgba(17, 24, 39, 0.55);
+}
+
+
+.correct-flash {
+    animation: correctFlash 0.25s ease;
+}
+
+.wrong-flash {
+    animation: wrongFlash 0.25s ease;
+}
+
+@keyframes correctFlash {
+    0% {
+        filter: brightness(1);
+    }
+    50% {
+        filter: brightness(1.6);
+    }
+    100% {
+        filter: brightness(1);
+    }
+}
+
+@keyframes wrongFlash {
+    0% {
+        background-color: #ef4444;
+    }
+    100% {
+        background-color: inherit;
+    }
+}
+
+@media (max-width: 650px) {
+    #board {
+        width: 92vw;
+        height: 92vw;
+    }
+
+    .top-panel {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

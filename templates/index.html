@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chess Square Visualizer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="app">
+    <h1>Chess Square Visualizer</h1>
+
+    <div class="top-panel">
+        <div>
+            <span class="label">Square</span>
+            <div id="target-square">--</div>
+        </div>
+
+        <div>
+            <span class="label">Time</span>
+            <div id="timer">03:00</div>
+        </div>
+
+        <div>
+            <span class="label">Score</span>
+            <div id="score">0</div>
+        </div>
+
+        <div>
+            <span class="label">Level</span>
+            <div id="level">1×1</div>
+        </div>
+    </div>
+
+    <button id="start-btn">Start Game</button>
+
+    <div id="message">Click start to begin.</div>
+
+    <div id="board-container">
+        <div id="board"></div>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
