@@ -150,7 +150,7 @@ chess-visualizer/
 ### Clone Repository
 
 ```bash
-git clone https://github.com/<your-username>/chess-visualizer.git
+git clone https://github.com/smharoon/chess-visualizer.git
 cd chess-visualizer
 ```
 
@@ -250,8 +250,3 @@ The progressive difficulty system allows beginners and advanced players to train
 - Opening training mode
 - Blindfold chess training
 
----
-
-## License
-
-This project is open source and available under the MIT License.
