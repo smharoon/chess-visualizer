@@ -22,8 +22,6 @@ Unlike traditional coordinate trainers, the game uses **progressive difficulty**
 - 3-minute timed training sessions
 - Real-time scoring
 - Visual feedback for correct and incorrect answers
-- Satisfying sound effects on successful clicks
-- Mobile-friendly responsive interface
 - Lightweight Flask backend
 - Dockerized deployment
 - CI/CD pipeline using GitHub Actions, Docker Hub, and Azure App Service
@@ -231,9 +229,6 @@ The primary goal of this project is to improve:
 
 - Chessboard visualization
 - Coordinate recognition speed
-- Board awareness
-- Pattern recognition
-- Spatial memory
 
 The progressive difficulty system allows beginners and advanced players to train using the same platform.
 
